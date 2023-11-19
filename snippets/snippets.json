@@ -1,0 +1,18 @@
+{
+    "Iniciador": {
+        "prefix": "ms:init",
+        "body": [
+            "La agarra Messi.",
+            "$0",
+            "¡gol!"
+        ],
+        "description": "Iniciador y final."
+    },
+    "Comentario": {
+        "prefix": "ms:comment",
+        "body": [
+            "#${1:Comentario}."
+        ],
+        "description": "Crear comentario."
+    }
+}
