@@ -28,12 +28,6 @@
         "language": "messi",
         "path": "./snippets/snippets.json"
       }
-    ],
-    "commands": [
-      {
-        "command": "extension.messi",
-        "title": "messi"
-      }
     ]
   }
 }

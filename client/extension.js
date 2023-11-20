@@ -1,158 +1,40 @@
 const vscode = require('vscode');
+const ARRAYS = require('./lists.js');
+
+
+const CommandsCompletion = []
+for (const [cmd, doc] of Object.entries(ARRAYS.COMMANDS)) {
+    var CompletionItem = new vscode.CompletionItem(cmd);
+    CompletionItem.documentation = new vscode.MarkdownString(doc);
+    CommandsCompletion.push(CompletionItem);
+};
 
 
 function activate(context) {
-    let disposable = vscode.commands.registerCommand('extension.messi', () => {
-        vscode.window.showInformationMessage('Ole messi');
-    });
-
-    context.subscriptions.push(disposable);
 
     vscode.languages.registerHoverProvider('messi', {
         provideHover(document, position, token) {
             const range = document.getWordRangeAtPosition(position);
             const word = document.getText(range);
+
             const signo = "**Fútbol**: Cambia el signo de la posición actual de la lista.";
             const sustantivo = "**Sustantivo**: Suman uno a la posición actual de la lista.";
             const adjetivo = "**Adjetivo**: Multiplican por dos a la posición actual de la lista." ;
-            const map = {
-                fútbol: signo,
-                actuación: sustantivo,
-                actuaciones: sustantivo,
-                astro: sustantivo,
-                astros: sustantivo,
-                banda: sustantivo,
-                bandas: sustantivo,
-                calidad: sustantivo,
-                calidades: sustantivo,
-                campo: sustantivo,
-                campos: sustantivo,
-                cancha: sustantivo,
-                canchas: sustantivo,
-                centro: sustantivo,
-                centros: sustantivo,
-                clase: sustantivo,
-                clases: sustantivo,
-                dios: sustantivo,
-                dioses: sustantivo,
-                estadio: sustantivo,
-                estadios: sustantivo,
-                estrella: sustantivo,
-                estrellas: sustantivo,
-                figura: sustantivo,
-                figuras: sustantivo,
-                galaxia: sustantivo,
-                galaxias: sustantivo,
-                gambeta: sustantivo,
-                gambetas: sustantivo,
-                habilidad: sustantivo,
-                habilidades: sustantivo,
-                ídola: sustantivo,
-                ídolo: sustantivo,
-                ídolos: sustantivo,
-                ídolos: sustantivo,
-                jugada: sustantivo,
-                jugadas: sustantivo,
-                jugador: sustantivo,
-                jugadora: sustantivo,
-                jugadores: sustantivo,
-                jugadoras: sustantivo,
-                lateral: sustantivo,
-                laterales: sustantivo,
-                leo: sustantivo,
-                lio: sustantivo,
-                leonel: sustantivo,
-                lionel: sustantivo,
-                muchacho: sustantivo,
-                muchachos: sustantivo,
-                muchacha: sustantivo,
-                muchachas: sustantivo,
-                mundo: sustantivo,
-                mundos: sustantivo,
-                país: sustantivo,
-                países: sustantivo,
-                partido: sustantivo,
-                partidos: sustantivo,
-                pelota: sustantivo,
-                pelotas: sustantivo,
-                pibe: sustantivo,
-                pibes: sustantivo,
-                piba: sustantivo,
-                pibas: sustantivo,
-                planeta: sustantivo,
-                planetas: sustantivo,
-                potencial: sustantivo,
-                potenciales: sustantivo,
-                pulga: sustantivo,
-                pulgas: sustantivo,
-                república: sustantivo,
-                repúblicas: sustantivo,
-                talento: sustantivo,
-                talentos: sustantivo,
-                titán: sustantivo,
-                titanes: sustantivo,
-                tribuna: sustantivo,
-                tribunas: sustantivo,
-                toda: sustantivo,
-                todo: sustantivo,
-                todas: sustantivo,
-                todos: sustantivo,
-                argentina: adjetivo,
-                argentino: adjetivo, 
-                argentinas: adjetivo,
-                argentinos: adjetivo,
-                favorita: adjetivo,  
-                favorito: adjetivo,  
-                favoritas: adjetivo, 
-                favoritos: adjetivo, 
-                fenomenal: adjetivo, 
-                fenomenales: adjetivo,
-                futbolística: adjetivo,
-                futbolísticas: adjetivo,
-                futbolístico: adjetivo,
-                futbolísticos: adjetivo,
-                habilidosa: adjetivo,
-                habilidoso: adjetivo,
-                habilidosas: adjetivo,
-                habilidosos: adjetivo,
-                increible: adjetivo,
-                increibles: adjetivo,
-                irrepetible: adjetivo,
-                irrepetibles: adjetivo,
-                impecable: adjetivo,
-                impecables: adjetivo,
-                impresionante: adjetivo,
-                impresionantes: adjetivo,
-                magistral: adjetivo,
-                magistrales: adjetivo,
-                maravilloso: adjetivo,
-                maravillosa: adjetivo,
-                maravillosos: adjetivo,
-                maravillosas: adjetivo,
-                mundial: adjetivo,
-                mundiales: adjetivo,
-                nacional: adjetivo,
-                nacionales: adjetivo,
-                talentosa: adjetivo,
-                talentoso: adjetivo,
-                talentosas: adjetivo,
-                talentosos: adjetivo,
-                titánica: adjetivo,
-                titánico: adjetivo,
-                titánicas: adjetivo,
-                titánicos: adjetivo,
-                tremenda: adjetivo,
-                tremendo: adjetivo,
-                tremendas: adjetivo,
-                tremendos: adjetivo,
-                única: adjetivo,
-                único: adjetivo,
-                únicas: adjetivo,
-                únicos: adjetivo
-            };
-            return new vscode.Hover(map[word.toLowerCase()])
-        },
+            
+            if ( word == 'fútbol' ) { var res = new vscode.Hover(signo) 
+            } else if ( ARRAYS.NOUNS.includes(word) ) { var res = new vscode.Hover(sustantivo) 
+            } else if ( ARRAYS.ADJECTIVES.includes(word) ) { var res = new vscode.Hover(adjetivo) };
+            return res;
+        }
     });
+
+    const CompletionProvider = vscode.languages.registerCompletionItemProvider('messi', {
+		provideCompletionItems(document, position, token, context) {
+			return CommandsCompletion;
+		}
+	});
+
+	context.subscriptions.push(CompletionProvider);
 }
 
 

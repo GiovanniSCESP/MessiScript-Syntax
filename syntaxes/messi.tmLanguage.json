@@ -14,14 +14,14 @@
 			"patterns": [
 				{
 					"name": "comment.block.messi",
-					"match": "(#.*|//.*)"
+					"match": "(#|//)[^.]*"
 				}
 			]
 		},
 		"noums": {
 			"patterns": [
 				{
-					"name":"markup.changed",
+					"name": "markup.changed",
 					"match": "(?i)(actuación|actuaciones|astro|astros|banda|bandas|calidad|calidades|campo|campos|cancha|canchas|centro|centros|clase|clases|dios|dioses|estadio|estadios|estrella|estrellas|figura|figuras|galaxia|galaxias|gambeta|gambetas|habilidad|habilidades|ídola|ídolo|ídolos|ídolos|jugada|jugadas|jugador|jugadora|jugadores|jugadoras|lateral|laterales|leo|lio|leonel|lionel|muchacho|muchachos|muchacha|muchachas|mundo|mundos|país|países|partido|partidos|pelota|pelotas|pibe|pibes|piba|pibas|planeta|planetas|potencial|potenciales|pulga|pulgas|república|repúblicas|talento|talentos|titán|titanes|tribuna|tribunas|toda|todo|todas|todos)"
 				}
 			]
@@ -29,7 +29,7 @@
 		"adjectives": {
 			"patterns": [
 				{
-					"name":"markup.bold",
+					"name": "markup.bold",
 					"match": "(?i)(argentina|argentino|argentinas|argentinos|favorita|favorito|favoritas|favoritos|fenomenal|fenomenales|futbolística|futbolísticas|futbolístico|futbolísticos|habilidosa|habilidoso|habilidosas|habilidosos|increible|increibles|irrepetible|irrepetibles|impecable|impecables|impresionante|impresionantes|magistral|magistrales|maravilloso|maravillosa|maravillosos|maravillosas|mundial|mundiales|nacional|nacionales|talentosa|talentoso|talentosas|talentosos|titánica|titánico|titánicas|titánicos|tremenda|tremendo|tremendas|tremendos|única|único|únicas|únicos)"
 				}
 			]
@@ -37,7 +37,7 @@
 		"special": {
 			"patterns": [
 				{
-					"name":"markup.inserted",
+					"name": "markup.inserted",
 					"match": "(?i)(fútbol)"
 				}
 			]

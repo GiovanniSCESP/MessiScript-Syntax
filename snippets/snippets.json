@@ -9,10 +9,29 @@
         "description": "Iniciador y final."
     },
     "Comentario": {
-        "prefix": "ms:comment",
+        "prefix": "ms:comentario",
         "body": [
             "#${1:Comentario}."
         ],
         "description": "Crear comentario."
+    },
+    "Asignar": {
+        "prefix": "ms:asignar",
+        "body": [
+            "Va messi, talento único e irrepetible. #4."
+        ],
+        "description": "Asignar valor."
+    },
+    "Imprimir": {
+        "prefix": "ms:print",
+        "body": [
+            "Juega Messi."
+        ]
+    },
+    "Mover": {
+        "prefix": "ms:posicion",
+        "body": [
+            "La mueve Messi por la (izquerda|derecha)"
+        ]
     }
 }
