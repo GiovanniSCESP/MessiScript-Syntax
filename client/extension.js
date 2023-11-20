@@ -29,12 +29,12 @@ function activate(context) {
     });
 
     const CompletionProvider = vscode.languages.registerCompletionItemProvider('messi', {
-		provideCompletionItems(document, position, token, context) {
-			return CommandsCompletion;
-		}
-	});
+        provideCompletionItems(document, position, token, context) {
+            return CommandsCompletion;
+        }
+    });
 
-	context.subscriptions.push(CompletionProvider);
+    context.subscriptions.push(CompletionProvider);
 }
 
 

@@ -9,7 +9,7 @@
 - Snippets de código con ejemplos `ms:snippet`.
 - Descripciones de Hover para parámetros.
 
-### Como ejecutar MessiScript desde Visual Studio Code.
+### Como ejecutar MessiScript desde Visual Studio Code
 En la configuración de la extensión [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) modificamos el json **Executor Map** y añadimos la línea:
 ```json
 "messi": "pyhon set PYTHONIOENCODING=utf8 && C:\\...\\msinterpreter.py"
