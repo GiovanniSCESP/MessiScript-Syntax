@@ -12,7 +12,7 @@ Soporte para el lenguaje **[MessiScript](https://github.com/Erawaa/MessiScriptIn
 - Descripciones de hover para parámetros.
 
 ## Instalación
-La extensión sigue en desarrollo, se puede probar copiando el repositorio a tu carpeta de extensiones de Visual Studio Code localizada en: `C:\Users\USUARIO\.vscode\extensions`.
+Se puede instalar desde el marketplace de Visual Studio Code, también se puede instalar copiando el repositorio a tu carpeta de extensiones de Visual Studio Code localizada en: `C:\Users\USUARIO\.vscode\extensions`.
 
 ## Uso
 - #### Autocompletado
