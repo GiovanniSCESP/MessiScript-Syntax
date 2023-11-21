@@ -31,8 +31,7 @@ En la configuración de la extensión **[Code Runner](https://marketplace.visual
 ```json
 "messi": "python set PYTHONIOENCODING=utf8 && C:\\...\\msinterpreter.py"
 ```
-> [!TIP]
-> > Dependiendo de como esté instalado Python en su sistema, puede que sea no necesario escribir Python al principio o que haya que sustituirlo por 'py', 'python3' u otros.
+> Dependiendo de como esté instalado Python en su sistema, puede que sea no necesario escribir Python al principio o que haya que sustituirlo por 'py', 'python3' u otros.
 
 ### Notas
 - La extensión no dispone de una detección de errores en el código solo ayuda con el proceso de desarrollo.
