@@ -12,7 +12,7 @@
 ### Como ejecutar MessiScript desde Visual Studio Code
 En la configuración de la extensión [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) modificamos el json **Executor Map** y añadimos la línea:
 ```json
-"messi": "pyhon set PYTHONIOENCODING=utf8 && C:\\...\\msinterpreter.py"
+"messi": "python set PYTHONIOENCODING=utf8 && C:\\...\\msinterpreter.py"
 ```
 > Dependiendo de como esté instalado python en tu sistema puede que sea no necesario escribir python al principio o que haya que sustituirlo por 'py', 'python3' u otros.
 
