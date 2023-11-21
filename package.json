@@ -1,33 +1,42 @@
 {
-  "name": "messiscript-syntax",
-  "displayName": "MessiScript Syntax",
-  "description": "Language support for MessiScript",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.84.0"
-  },
-  "categories": [
-    "Programming Languages",
-    "Snippets"
-  ],
-  "main": "./client/extension.js",
-  "contributes": {
-    "languages": [{
-      "id": "messi",
-      "aliases": ["MessiScript", "messi"],
-      "extensions": [".messi"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "messi",
-      "scopeName": "source.messi",
-      "path": "./syntaxes/messi.tmLanguage.json"
-    }],
-    "snippets": [
-      {
-        "language": "messi",
-        "path": "./snippets/snippets.json"
-      }
-    ]
-  }
+	"name": "messiscript-syntax",
+	"displayName": "MessiScript Syntax",
+	"description": "Language support for MessiScript",
+	"icon": "img/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/GiovanniSCESP/MessiScript-Syntax"
+	},
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.84.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets",
+		"Other"
+	],
+	"main": "./client/extension.js",
+	"contributes": {
+		"languages": [{
+			"id": "messi",
+			"aliases": [
+				"MessiScript",
+				"messi"
+			],
+			"extensions": [
+				".messi"
+			],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "messi",
+			"scopeName": "source.messi",
+			"path": "./syntaxes/messi.tmLanguage.json"
+			}],
+		"snippets": [{
+			"language": "messi",
+			"path": "./snippets/snippets.json"
+		}]
+	}
 }

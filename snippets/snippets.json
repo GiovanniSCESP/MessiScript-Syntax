@@ -1,37 +1,54 @@
 {
-    "Iniciador": {
-        "prefix": "ms:init",
-        "body": [
-            "La agarra Messi.",
-            "$0",
-            "¡gol!"
-        ],
-        "description": "Iniciador y final."
-    },
-    "Comentario": {
-        "prefix": "ms:comentario",
-        "body": [
-            "#${1:Comentario}."
-        ],
-        "description": "Crear comentario."
-    },
-    "Asignar": {
-        "prefix": "ms:asignar",
-        "body": [
-            "Va messi, talento único e irrepetible. #4."
-        ],
-        "description": "Asignar valor."
-    },
-    "Imprimir": {
-        "prefix": "ms:print",
-        "body": [
-            "Juega Messi."
-        ]
-    },
-    "Mover": {
-        "prefix": "ms:posicion",
-        "body": [
-            "La mueve Messi por la (izquerda|derecha)"
-        ]
-    }
+	"Iniciador": {
+		"prefix": "ms:init",
+		"body": [
+			"La agarra Messi.",
+			"$0",
+			"¡gol!"
+		],
+		"description": "Iniciador y final."
+	},
+	"Comentario": {
+		"prefix": "ms:comentario",
+		"body": [
+			"#${1:Comentario}."
+		],
+		"description": "Crear comentario."
+	},
+	"Asignar": {
+		"prefix": "ms:asignar",
+		"body": [
+			"Va messi, talento único e irrepetible. #4.",
+			"Juega Messi."
+		],
+		"description": "Asignar valor."
+	},
+	"Imprimir": {
+		"prefix": "ms:print",
+		"body": [
+			"Juega Messi."
+		],
+		"description": "Imprime el valor de la lista."
+	},
+	"Mover": {
+		"prefix": "ms:posicion",
+		"body": [
+			"La mueve Messi por la ${1|izquierda,derecha|}."
+		],
+		"description": "Mueve la posición de la lista izquierda o derecha."
+	},
+	"Sustantivos": {
+		"prefix": "ms:sustantivo",
+		"body": [
+			"${1|actuación,actuaciones,astro,astros,banda,bandas,calidad,calidades,campo,campos,cancha,canchas,centro,centros,clase,clases,dios,dioses,estadio,estadios,estrella,estrellas,figura,figuras,galaxia,galaxias,gambeta,gambetas,habilidad,habilidades,ídola,ídolo,ídolos,ídolos,jugada,jugadas,jugador,jugadora,jugadores,jugadoras,lateral,laterales,leo,lio,leonel,lionel,muchacho,muchachos,muchacha,muchachas,mundo,mundos,país,países,partido,partidos,pelota,pelotas,pibe,pibes,piba,pibas,planeta,planetas,potencial,potenciales,pulga,pulgas,república,repúblicas,talento,talentos,titán,titanes,tribuna,tribunas,toda,todo,todas,todos|}"
+		],
+		"description": "Muestra todos los sustantivos."
+	},
+	"Adjectivos": {
+		"prefix": "ms:adjetivos",
+		"body": [
+			"${1|argentina,argentino,argentinas,argentinos,favorita,favorito,favoritas,favoritos,fenomenal,fenomenales,futbolística,futbolísticas,futbolístico,futbolísticos,habilidosa,habilidoso,habilidosas,habilidosos,increible,increibles,irrepetible,irrepetibles,impecable,impecables,impresionante,impresionantes,magistral,magistrales,maravilloso,maravillosa,maravillosos,maravillosas,mundial,mundiales,nacional,nacionales,talentosa,talentoso,talentosas,talentosos,titánica,titánico,titánicas,titánicos,tremenda,tremendo,tremendas,tremendos,única,único,únicas,únicos|}"
+		],
+		"description": "Muestra todos los adjetivos."
+	}
 }
