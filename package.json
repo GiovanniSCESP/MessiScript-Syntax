@@ -2,12 +2,13 @@
 	"name": "messiscript-syntax",
 	"displayName": "MessiScript Syntax",
 	"description": "Language support for MessiScript",
+	"publisher": "GiovanniSCESP",
+	"version": "1.0.0",
 	"icon": "img/icon.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/GiovanniSCESP/MessiScript-Syntax"
 	},
-	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.84.0"
 	},
