@@ -4,9 +4,14 @@ const ARRAYS = require('./lists.js');
 
 // Creación de la lista de comandos para autocompletar.
 const CompletionList = []
-for ( const [cmd, doc] of Object.entries(ARRAYS.COMMANDS) ) {
-	var CompletionItem = new vscode.CompletionItem(cmd);			// Nombre del elemento list.js
-	CompletionItem.documentation = new vscode.MarkdownString(doc);	// Documentación de list.js
+for ( const [cmd, info] of Object.entries(ARRAYS.COMMANDS) ) {
+	var CompletionItem = new vscode.CompletionItem(cmd);		// Nombre del elemento.
+
+	if ( info['type'] == 'snippet' ) {
+		CompletionItem.insertText = new vscode.SnippetString(info['snippet']);	// Snippet.
+	}
+
+	CompletionItem.documentation = new vscode.MarkdownString(info['doc']);		// Documentación.
 	CompletionList.push(CompletionItem);
 };
 
@@ -19,9 +24,9 @@ function activate(context) {
 			const range = document.getWordRangeAtPosition(position);
 			const word = document.getText(range);
 
-			const signo = "**Fútbol**: Cambia el signo de la posición actual de la lista.";
-			const sustantivo = "**Sustantivo**: Suman uno a la posición actual de la lista.";
-			const adjetivo = "**Adjetivo**: Multiplican por dos a la posición actual de la lista.";
+			const signo = '**Fútbol**: Cambia el signo de la posición actual de la lista.';
+			const sustantivo = '**Sustantivo**: Suman uno a la posición actual de la lista.';
+			const adjetivo = '**Adjetivo**: Multiplican por dos a la posición actual de la lista.';
 
 			if (word == 'fútbol') { var res = new vscode.Hover(signo)
 			} else if (ARRAYS.NOUNS.includes(word)) { var res = new vscode.Hover(sustantivo)
@@ -38,7 +43,7 @@ function activate(context) {
 	});
 
 	context.subscriptions.push(CompletionProvider);
-}
+};
 
 
 function deactivate() { };

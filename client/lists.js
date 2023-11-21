@@ -1,19 +1,65 @@
 exports.COMMANDS = {
-	"La agarra Messi.": "Indica el comienzo del código.",
-	"¡gol!": "Indica el final del código.",
-	"Va Messi,": "Asigna un valor a la posición actual de la lista. Es el único comando que además necesita que se le pase un parámetro. Es una oración que permite determinar el valor que se asignará.",
-	"Encara Messi.": "Asigna un cero a la posición actual de la lista.",
-	"Ankara Messi.": "Asigna un cero a la posición actual de la lista.",
-	"La mueve Messi por la derecha.": "Cambia la posición a la derecha.",
-	"La mueve Messi por la izquierda.": "Cambia la posición a la izquierda.",
-	"Juega Messi.": "Muestra por pantalla el número de la posición actual de la lista.",
-	"La pisa Messi.": "Muestra por pantalla el caracter correspondiente en UNICODE al número de la posición actual de la lista.",
-	"Siempre Messi.": "Toma un input numérico del usuario, y lo guarda en la posición actual de la lista. Si el input no es un número entero, se ignora.",
-	"Gambetea Messi.": "Toma un input del usuario, y guarda el número correspondiente en UNICODE al primer caracter que se ingresa.",
-	"Sigue Messi.": "Si la posición actual es cero, se saltea todos los comandos hasta encontrarse un 'vuelve Messi'. Si no lo es, ejecuta los comandos hasta encontrarse con un comando 'vuelve Messi' y luego vuelve al comando. Una vez que vuelve, corrobora de vuelta el valor de la posición actual, y actúa de la misma forma.",
-	"Vuelve Messi.": "Indica el final de un bucle de comandos iniciado por un comando 'sigue Messi'.",
-	"Corre Messi.": "Copia el contenido de la posición actual de la lista al portapapeles.",
-	"Amaga Messi.": "Copia el contenido del portapapeles a la posición actual de la lista."
+	"La agarra Messi.": {
+		"doc":"Indica el comienzo del código.",
+		"type": "simple"
+	},
+	"¡gol!": {
+		"doc":"Indica el final del código.",
+		"type": "simple"
+	},
+	"Va Messi,": {
+		"doc":"Asigna un valor a la posición actual de la lista. Es el único comando que además necesita que se le pase un parámetro. Es una oración que permite determinar el valor que se asignará.",
+		"type": "snippet",
+		"snippet": "Va messi, $0."
+	},
+	"Encara Messi.": {
+		"doc":"Asigna un cero a la posición actual de la lista.",
+		"type": "simple"
+	},
+	"Ankara Messi.": {
+		"doc":"Asigna un cero a la posición actual de la lista.",
+		"type": "simple"
+	},
+	"La mueve Messi por la derecha.": {
+		"doc":"Cambia la posición a la derecha.",
+		"type": "simple"
+	},
+	"La mueve Messi por la izquierda.": {
+		"doc":"Cambia la posición a la izquierda.",
+		"type": "simple"
+	},
+	"Juega Messi.": {
+		"doc":"Muestra por pantalla el número de la posición actual de la lista.",
+		"type": "simple"
+	},
+	"La pisa Messi.": {
+		"doc":"Muestra por pantalla el caracter correspondiente en UNICODE al número de la posición actual de la lista.",
+		"type": "simple"
+	},
+	"Siempre Messi.": {
+		"doc":"Toma un input numérico del usuario, y lo guarda en la posición actual de la lista. Si el input no es un número entero, se ignora.",
+		"type": "simple"
+	},
+	"Gambetea Messi.": {
+		"doc":"Toma un input del usuario, y guarda el número correspondiente en UNICODE al primer caracter que se ingresa.",
+		"type": "simple"
+	},
+	"Sigue Messi.": {
+		"doc":"Si la posición actual es cero, se saltea todos los comandos hasta encontrarse un 'vuelve Messi'. Si no lo es, ejecuta los comandos hasta encontrarse con un comando 'vuelve Messi' y luego vuelve al comando. Una vez que vuelve, corrobora de vuelta el valor de la posición actual, y actúa de la misma forma.",
+		"type": "simple"
+	},
+	"Vuelve Messi.": {
+		"doc":"Indica el final de un bucle de comandos iniciado por un comando 'sigue Messi'.",
+		"type": "simple"
+	},
+	"Corre Messi.": {
+		"doc":"Copia el contenido de la posición actual de la lista al portapapeles.",
+		"type": "simple"
+	},
+	"Amaga Messi.": {
+		"doc":"Copia el contenido del portapapeles a la posición actual de la lista.",
+		"type": "simple"
+	}
 };
 
 exports.NOUNS = [

@@ -33,12 +33,6 @@
 					"name": "markup.inserted.messi",
 					"match": "(?i)\\b(fútbol)\\b"
 				}]
-		},
-		"debug": {
-			"patterns": [{
-					"name": "markup.quote",
-					"match": "\\b(?!(talento|talentosos|caquitas)\\b)\\w+\\b"
-				}]
 		}
 	},
 	"scopeName": "source.messi"
