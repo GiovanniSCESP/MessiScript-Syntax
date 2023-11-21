@@ -1,6 +1,6 @@
 # MessiScript Syntax
 
-![MessiSyntax](img/intro.gif)
+![MessiSyntax](https://raw.githubusercontent.com/GiovanniSCESP/MessiScript-Syntax/main/img/intro.gif)
 
 Soporte para el lenguaje **[MessiScript](https://github.com/Erawaa/MessiScriptInterpreter)** en Visual Studio Code.
 
@@ -16,13 +16,13 @@ La extensión sigue en desarrollo, se puede probar copiando el repositorio a tu 
 
 ## Uso
 - #### Autocompletado
-![MessiSyntax](img/autocompletado.gif)
-![MessiSyntax](img/descripciones.png)
+![MessiSyntax](https://raw.githubusercontent.com/GiovanniSCESP/MessiScript-Syntax/main/img/autocompletado.gif)
+![MessiSyntax](https://raw.githubusercontent.com/GiovanniSCESP/MessiScript-Syntax/main/img/descripciones.png)
 
 La extensión da recomendaciones de autocompletado, así como proporcionar una descripción de cada uno de los comandos disponibles.
 
 - #### Snippets
-![MessiSyntax](img/snippets.gif)
+![MessiSyntax](https://raw.githubusercontent.com/GiovanniSCESP/MessiScript-Syntax/main/img/snippets.gif)
 
 Snippets de código con ejemplos, todas las opciones de sustantivos y adjetivos.
 
