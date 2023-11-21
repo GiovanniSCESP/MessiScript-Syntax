@@ -4,7 +4,7 @@
 
 ### Added
 
-- Tipos de autocompeletado: simple y snippet.
+- Tipos de autocompletado: simple y snippet.
 
 ### Fixed
 
