@@ -1,23 +1,29 @@
 exports.COMMANDS = {
 	"La agarra Messi.": {
 		"doc":"Indica el comienzo del código.",
-		"type": "simple"
+		"code": "La agarra Messi.\n...\n¡gol!",
+		"type": "snippet",
+		"snippet": "La agarra Messi.\n$0\n¡gol!"
 	},
 	"¡gol!": {
 		"doc":"Indica el final del código.",
+		"code": "La agarra Messi.\n...\n¡gol!",
 		"type": "simple"
 	},
 	"Va Messi,": {
 		"doc":"Asigna un valor a la posición actual de la lista. Es el único comando que además necesita que se le pase un parámetro. Es una oración que permite determinar el valor que se asignará.",
+		"code": "Va Messi, talento único.# => 2.",
 		"type": "snippet",
-		"snippet": "Va messi, $0."
+		"snippet": "Va messi, ${1:ms:sustantivo}."
 	},
 	"Encara Messi.": {
 		"doc":"Asigna un cero a la posición actual de la lista.",
+		"code": "Va Messi, talento único.# => 2.\nEncara Messi.# => 0",
 		"type": "simple"
 	},
 	"Ankara Messi.": {
 		"doc":"Asigna un cero a la posición actual de la lista.",
+		"code": "Va Messi, talento único.# => 2.\nAnkara Messi.# => 0",
 		"type": "simple"
 	},
 	"La mueve Messi por la derecha.": {
@@ -30,10 +36,12 @@ exports.COMMANDS = {
 	},
 	"Juega Messi.": {
 		"doc":"Muestra por pantalla el número de la posición actual de la lista.",
+		"code": "Va Messi, talento único.\nJuega Messi.# => 2",
 		"type": "simple"
 	},
 	"La pisa Messi.": {
 		"doc":"Muestra por pantalla el caracter correspondiente en UNICODE al número de la posición actual de la lista.",
+		"code": "Va Messi, talento único.\nLa pisa Messi.# => ☻",
 		"type": "simple"
 	},
 	"Siempre Messi.": {
@@ -46,10 +54,13 @@ exports.COMMANDS = {
 	},
 	"Sigue Messi.": {
 		"doc":"Si la posición actual es cero, se saltea todos los comandos hasta encontrarse un 'vuelve Messi'. Si no lo es, ejecuta los comandos hasta encontrarse con un comando 'vuelve Messi' y luego vuelve al comando. Una vez que vuelve, corrobora de vuelta el valor de la posición actual, y actúa de la misma forma.",
-		"type": "simple"
+		"code": "Sigue Messi.\n...\nVuelve Messi.",
+		"type": "snippet",
+		"snippet": "Sigue Messi.\n$0\nVuelve Messi."
 	},
 	"Vuelve Messi.": {
 		"doc":"Indica el final de un bucle de comandos iniciado por un comando 'sigue Messi'.",
+		"code": "Sigue Messi.\n...\nVuelve Messi.",
 		"type": "simple"
 	},
 	"Corre Messi.": {

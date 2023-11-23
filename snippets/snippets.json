@@ -18,17 +18,24 @@
 	"Asignar": {
 		"prefix": "ms:asignar",
 		"body": [
-			"Va messi, talento único e irrepetible. #4.",
+			"Va Messi, talento único e irrepetible. #4.",
 			"Juega Messi."
 		],
 		"description": "Asignar valor."
 	},
-	"Imprimir": {
-		"prefix": "ms:print",
+	"ImprimirNum": {
+		"prefix": ["ms:printNum", "ms:imprimirNum"],
 		"body": [
 			"Juega Messi."
 		],
 		"description": "Imprime el valor de la lista."
+	},
+	"ImprimirLetra": {
+		"prefix": ["ms:printLetra", "ms:imprimirLetra"],
+		"body": [
+			"La pisa Messi."
+		],
+		"description": "Imprime el caracter UNICODE del valor de la lista."
 	},
 	"Mover": {
 		"prefix": "ms:posicion",
@@ -36,6 +43,19 @@
 			"La mueve Messi por la ${1|izquierda,derecha|}."
 		],
 		"description": "Mueve la posición de la lista izquierda o derecha."
+	},
+	"Bucle": {
+		"prefix": "ms:bucle",
+		"body": [
+			"Va Messi, talento único e irrepetible.# => 4 Iteraciones del bucle.",
+			"",
+			"Sigue Messi.# Inicio Bucle.",
+			"",
+			"Juega Messi.# Imprime el valor resultante.",
+			"Va Messi, con un fútbol de calidad, un genio del fútbol.# Resta 1 cada iteración.",
+			"",
+			"Vuelve Messi.# Final Bucle."
+		]
 	},
 	"Sustantivos": {
 		"prefix": "ms:sustantivo",

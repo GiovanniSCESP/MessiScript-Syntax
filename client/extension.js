@@ -11,7 +11,7 @@ for ( const [cmd, info] of Object.entries(ARRAYS.COMMANDS) ) {
 		CompletionItem.insertText = new vscode.SnippetString(info['snippet']);	// Snippet.
 	}
 
-	CompletionItem.documentation = new vscode.MarkdownString(info['doc']);		// Documentación.
+	CompletionItem.documentation = new vscode.MarkdownString(info['doc']).appendCodeblock(`${info['code'] ?? ''}`, 'MessiScript');	// Documentación y código de ejemplo.
 	CompletionList.push(CompletionItem);
 };
 
